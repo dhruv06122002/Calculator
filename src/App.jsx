@@ -1,22 +1,22 @@
 // "bootstrap/dist/css/bootstrap.min.css";
-import style from "./App.module.css";
+
 import ButtonsContainer from "./Components/ButtonsContainer";
-import Display from "./Components/Display";
+import Description from "./Components/Description";
 
 function App() {
   return (
-    <body className={style.body}>
+    <body>
       <center>
-        <h1>This is my First react app .</h1>
-        <h1></h1>
-        <div className={style.calculatorBody}>
-          <div className={style.calculator}>
-            <Display />
-            <ButtonsContainer></ButtonsContainer>
-          </div>
-        </div>
-        <h1>Thank you.</h1>
+        <h1>React Calculator</h1>
       </center>
+      <h3>Welcome to my first React Calculator project!</h3>
+      <center>
+        <div>
+          <ButtonsContainer></ButtonsContainer>
+        </div>
+      </center>
+      <Description />
+      <h1>Thank you.</h1>
     </body>
   );
 }
