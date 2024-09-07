@@ -3,3 +3,14 @@
   width: 250px;
   border-radius: 5px;
 }
+
+.calculatorBody{
+  border: 10px solid rgb(63, 61, 61);
+  width: 250px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.body{
+  background-color: black;
+}
