@@ -1,6 +1,6 @@
 import style from "./ButtonsContainer.module.css";
 import Display from "./Display";
-const ButtonsContainer = () => {
+const ButtonsContainer = ({ onButtonClick, displayValue }) => {
   const buttonOperations = ["+", "-", "×", "÷"];
   const buttonNumbers = [
     "7",
@@ -19,29 +19,36 @@ const ButtonsContainer = () => {
 
   return (
     <div className={style.container}>
-      {/* Display section */}
-      <Display />
-
-      {/* Operation buttons */}
+      <Display display={displayValue} />
       <div className={style.operations}>
         {buttonOperations.map((operation) => (
-          <button key={operation} className={style.operationButton}>
+          <button
+            key={operation}
+            className={style.operationButton}
+            onClick={() => onButtonClick(operation)}
+          >
             {operation}
           </button>
         ))}
       </div>
 
-      {/* Number buttons */}
       <div className={style.numbers}>
         {buttonNumbers.map((number) => (
-          <button key={number} className={style.numberButton}>
+          <button
+            key={number}
+            className={style.numberButton}
+            onClick={() => onButtonClick(number)}
+          >
             {number}
           </button>
         ))}
       </div>
 
-      {/* Equals button */}
-      <button aria-rowspan={4} className={style.equalsButton}>
+      <button
+        aria-rowspan={4}
+        className={style.equalsButton}
+        onClick={() => onButtonClick("=")}
+      >
         =
       </button>
     </div>

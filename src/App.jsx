@@ -1,9 +1,23 @@
-// "bootstrap/dist/css/bootstrap.min.css";
-
+import { useState } from "react";
 import ButtonsContainer from "./Components/ButtonsContainer";
 import Description from "./Components/Description";
 
 function App() {
+  const [calVal, setCalVal] = useState("");
+  const onButtonClick = (buttonText) => {
+    if (buttonText === "AC") {
+      setCalVal("");
+    } else if (buttonText === "=") {
+      const result = eval(calVal);
+      setCalVal(result);
+    } else {
+      const newDisplayValue = calVal + buttonText;
+      setCalVal(newDisplayValue);
+    }
+
+    console.log(buttonText);
+  };
+
   return (
     <body>
       <center>
@@ -12,7 +26,10 @@ function App() {
       <h3>Welcome to my first React Calculator project!</h3>
       <center>
         <div>
-          <ButtonsContainer></ButtonsContainer>
+          <ButtonsContainer
+            onButtonClick={onButtonClick}
+            displayValue={calVal}
+          ></ButtonsContainer>
         </div>
       </center>
       <Description />
