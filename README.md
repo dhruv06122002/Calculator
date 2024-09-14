@@ -1,7 +1,5 @@
 # Calculator App
 
-![Calculator](https://your-image-link.com) <!-- Optional: Add a screenshot of your calculator app -->
-
 ## Description
 
 This is my first React project, a basic **Calculator App** built using React, Vite, and Bootstrap. The app allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division.
@@ -51,13 +49,6 @@ To run this project locally, follow these steps:
 
    ```bash
    npm run dev
-
-   ```
-
-5. Clone the repository:
-
-   ```bash
-   git clone https://github.com/dhruv06122002/Calculator.git
    ```
 
 Currently, two official plugins are available:
