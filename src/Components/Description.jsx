@@ -3,7 +3,9 @@ import style from "./Description.module.css";
 const Description = () => {
   return (
     <body className={style.body}>
-      <b>About the Project:</b>
+      <h1 className={style.h1}>
+        <b>About the Project:</b>
+      </h1>
       <p className={style.p}>
         I have developed a calculator as my first React app, using modern web
         development tools and frameworks.
@@ -20,12 +22,18 @@ const Description = () => {
         This approach makes the codebase more maintainable , reusable and
         modular.
       </p>
-      <b>Key Features and Skills Learned</b>
-      <ul>
-        <li>React Components & Props:</li>
+      <h1>&nbsp;</h1>
+      <h1 className={style.h1}>
+        <b>Key Features and Skills Learned</b>
+      </h1>
+      <ul className={style.p}>
+        <li>React Components & Props</li>
         <li>Map Method</li>
         <li>Modular CSS</li>
         <li>GitHub Repository Management</li>
+        <li>State Handling</li>
+        <li>Passing value from child to parent and parent to child</li>
+        <li>Event Handling</li>
         <li>Deploying React Apps</li>
       </ul>
     </body>
