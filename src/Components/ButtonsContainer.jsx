@@ -1,7 +1,7 @@
 import style from "./ButtonsContainer.module.css";
 import Display from "./Display";
 const ButtonsContainer = ({ onButtonClick, displayValue }) => {
-  const buttonOperations = ["+", "-", "*", "÷"];
+  const buttonOperations = ["+", "-", "*", "/"];
   const buttonNumbers = [
     "7",
     "8",
